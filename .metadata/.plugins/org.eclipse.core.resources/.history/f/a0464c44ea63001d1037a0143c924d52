@@ -1,0 +1,20 @@
+package com.nvd.example.model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import sun.awt.image.ImageWatched.Link;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@XmlRootElement
+public class Article {
+	private Integer id;
+    private String content;
+    private String publishedDate;
+    private Integer authorId;
+    private Link self;
+}

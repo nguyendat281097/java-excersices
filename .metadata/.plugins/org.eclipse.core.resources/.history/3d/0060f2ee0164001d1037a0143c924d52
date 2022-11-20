@@ -1,0 +1,6 @@
+package com.nvd.example.assembler;
+
+import com.nvd.example.model.Article;
+
+public class ArticleModelAssembler implements RepresentationModelAssembler<Article, EntityModel<Article>> {
+}

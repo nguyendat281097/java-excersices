@@ -1,0 +1,22 @@
+package com.nvd.training.academe.test;
+
+public class Excersice3 {
+	/*
+	 * Requirement: Cho một mảng các số nguyên A theo thứ tự và có thể trùng lặp như
+	 * bên dưới. 
+	 */
+
+	/*
+	 * Analyze: 
+	 * 1. Kiểm tra phần tử và số lần xuất hiện trong mảng
+	 * 2. Nếu số lần xuất hiện lớn hơn phần tử -> Remove n phần tử đó = số lần xuất hiện - phần tử
+	 * 3. Nếu số lần xuất hiện bé hơn phần tử
+	 * 3.1. Nếu phần tử - số lần xuất hiện > phần tử / 2 
+	 * -> Không thể insert thêm để view phần tử đó lên array 
+	 * -> Remove m phần tử đó = số lần xuất hiện
+	 * 3.2. Nếu phần tử - số lần xuất hiện <= phần tử / 2
+	 * -> Insert thêm o phần tử đó = phần tử - số lần xuất hiện
+	 * 4. Nếu số lần xuất hiện = phần tử -> Bỏ qua
+	 * Trả về kết quả = n + m + o
+	 */
+}

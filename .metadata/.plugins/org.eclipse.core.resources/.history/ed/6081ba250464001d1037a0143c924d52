@@ -1,0 +1,50 @@
+package com.nvd.example.controller;
+
+import javax.websocket.server.PathParam;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nvd.example.model.Article;
+import com.nvd.example.service.ArticleService;
+
+@RestController
+@RequestMapping("/articles")
+public class ArticleController {
+
+	@Autowired
+	private ArticleService articleService;
+
+	@GetMapping("/")
+	public CollectionModel<EntityModel<Article>> getArticles() {
+		List<EntityModel<Account>> listEntityModel = service.listAll().stream().map(modelAssembler::toModel)
+				.collect(Collectors.toList());
+
+		CollectionModel<EntityModel<Account>> collectionModel = CollectionModel.of(listEntityModel);
+
+		collectionModel.add(linkTo(methodOn(AccountApi.class).listAll()).withSelfRel());
+		return null;
+	}
+
+	@GetMapping("/{id}/comments")
+	public HttpEntity<EntityModel<String>> getComments(@PathParam("id") Integer id) {
+		return null;
+	}
+
+	@GetMapping("/{id}/tags")
+	public HttpEntity<EntityModel<String>> getTags(@PathParam("id") Integer id) {
+		return null;
+	}
+
+	@GetMapping("/{id}")
+	public ResponseEntity<EntityModel<Article>> getArticle(@PathParam("id") Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

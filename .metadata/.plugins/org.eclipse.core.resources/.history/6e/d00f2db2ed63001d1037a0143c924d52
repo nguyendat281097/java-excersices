@@ -1,0 +1,5 @@
+package com.nvd.example.service;
+
+public class ArticleService {
+
+}

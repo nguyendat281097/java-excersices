@@ -1,0 +1,27 @@
+package com.nvd.example.assembler;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.IanaLinkRelations;
+import org.springframework.hateoas.server.RepresentationModelAssembler;
+
+import com.nvd.example.controller.ArticleController;
+import com.nvd.example.model.Article;
+
+public class ArticleModelAssembler implements RepresentationModelAssembler<Article, EntityModel<Article>> {
+
+	@Override
+	public EntityModel<Article> toModel(Article entity) {
+		EntityModel<Article> articleModel = EntityModel.of(entity);
+		 
+		accountModel.add(linkTo(methodOn(ArticleController.class).getOne(entity.getId())).withSelfRel());
+	    accountModel.add(linkTo(methodOn(ArticleController.class).listAll()).withRel(IanaLinkRelations.COLLECTION));
+	     
+	    accountModel.add(linkTo(methodOn(ArticleController.class).getComments(entity.getId(), null)).withRel("deposits"));
+	     
+	    accountModel.add(linkTo(methodOn(ArticleController.class).getTags(entity.getId(), null)).withRel("withdrawal"));
+		return null;
+	}
+}

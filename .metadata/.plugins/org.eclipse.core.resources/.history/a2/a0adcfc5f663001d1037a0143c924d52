@@ -1,0 +1,23 @@
+package com.nvd.example.controller;
+
+import javax.ws.rs.core.Link;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.nvd.example.model.Article;
+import com.nvd.example.service.ArticleService;
+
+@RestController
+@RequestMapping("/articles")
+public class ArticleController {
+
+	@Autowired
+	private ArticleService articleService;
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<Article> getArticles(@PathVariable("id") Integer id) {
+		Article article = articleService.getArticle(id);
+		Link seftLink = Link
+		return new ResponseEntity<Article>(, HttpStatus.OK);
+	}
+}

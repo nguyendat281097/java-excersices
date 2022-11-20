@@ -1,0 +1,37 @@
+package com.nvd.example.controller;
+
+import javax.websocket.server.PathParam;
+import javax.ws.rs.QueryParam;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nvd.example.model.Article;
+import com.nvd.example.service.ArticleService;
+
+@RestController
+@RequestMapping("/articles")
+public class ArticleController {
+
+	@Autowired
+	private ArticleService articleService;
+
+
+	@GetMapping("?page={page}")
+	public ResponseEntity<Article> getArticles(@QueryParam("page") int page) {
+		return null;
+	}
+
+	@GetMapping("/{id}/comments")
+	public ResponseEntity<Article> getComments(@PathParam("id") int id) {
+		return null;
+	}
+
+	@GetMapping("/{id}/tags")
+	public ResponseEntity<Article> getTags(@PathParam("id") int id) {
+		return null;
+	}
+}

@@ -1,0 +1,12 @@
+package com.nvd.example.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.nvd.example.model.Article;
+
+public class ArticleService {
+	public static List<Article> articles = new ArrayList<>();
+	
+	
+}

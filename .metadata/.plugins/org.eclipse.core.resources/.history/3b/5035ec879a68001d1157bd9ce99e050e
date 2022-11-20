@@ -1,0 +1,14 @@
+package com.nvd.training.academe.test;
+
+public class Excersice3 {
+	/*
+	 * Requirement: Cho một mảng các số nguyên A theo thứ tự không giảm và số nguyên
+	 * K. Kiểm tra xem A có chứa các số 1,2,...K không? (Mỗi số từ 1 đến K xuất hiện
+	 * ít nhất 1 lần)
+	 * 
+	 */
+
+	/*
+	 * Analyze: 1.
+	 */
+}
