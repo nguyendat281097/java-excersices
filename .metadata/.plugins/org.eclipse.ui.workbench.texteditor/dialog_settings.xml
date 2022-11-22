@@ -6,12 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="articleModel"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="3D"/>
 			<item value="ArticleModel"/>
 			<item value="Account"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 			<item value="articleModel"/>
 			<item value="Article"/>
 		</list>
